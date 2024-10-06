@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
   [SerializeField] private Animator leftShooting;
   [SerializeField] private Animator rightShooting;
+  [SerializeField] private Gun rightgun;
+  [SerializeField] private Gun leftGun;
 
   private void Update()
   {
@@ -15,12 +17,14 @@ public class Player : MonoBehaviour
     {
      leftShooting.SetBool("Shooting", true);
      StartCoroutine(FixAnimation(leftShooting));
+     leftGun.ShootBullet();
     }
 
     if (Input.GetMouseButtonDown(1))
     {
       rightShooting.SetBool("Shooting", true);
       StartCoroutine(FixAnimation(rightShooting));
+      rightgun.ShootBullet();
     }
   }
 

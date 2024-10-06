@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="084de722-bfbd-4231-9e22-bb816742cfab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <updated>1727877992984</updated>
       <workItem from="1727877995897" duration="5000" />
       <workItem from="1727947013794" duration="1222000" />
-      <workItem from="1728198647704" duration="3387000" />
+      <workItem from="1728198647704" duration="4262000" />
     </task>
     <servers />
   </component>
