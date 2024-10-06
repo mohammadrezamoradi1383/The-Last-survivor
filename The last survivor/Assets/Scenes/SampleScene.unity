@@ -1735,6 +1735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751411652}
+  - component: {fileID: 751411654}
   - component: {fileID: 751411653}
   m_Layer: 0
   m_Name: Player
@@ -1772,6 +1773,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
+--- !u!114 &751411654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751411651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a359c51ff6fad346b334217d1c13908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftShooting: {fileID: 7160251301310764344}
+  rightShooting: {fileID: 959325563974451539}
 --- !u!1001 &767603844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4784,6 +4799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 959325563974451538}
+  - component: {fileID: 959325563974451539}
   m_Layer: 0
   m_Name: arm.R
   m_TagString: Untagged
@@ -4807,6 +4823,27 @@ Transform:
   - {fileID: 5846641346400810200}
   m_Father: {fileID: 7241063451218353102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &959325563974451539
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955419860070921291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d907e93e9047b8843805cc50b6a06231, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1193601050235046476
 Transform:
   m_ObjectHideFlags: 0
@@ -5088,6 +5125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7160251301310764343}
+  - component: {fileID: 7160251301310764344}
   m_Layer: 0
   m_Name: arm.L
   m_TagString: Untagged
@@ -6067,6 +6105,27 @@ Transform:
   - {fileID: 7695154007028229402}
   m_Father: {fileID: 7241063451218353102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7160251301310764344
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719822291446655472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d537b68104bcb064fb737ff5f031a59c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7161277063460457292
 Transform:
   m_ObjectHideFlags: 0
