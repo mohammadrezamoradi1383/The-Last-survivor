@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 609134622439130118, guid: 7efd3b10ec34db94584f343797763e82, type: 3}
+  bullet: {fileID: 6861588600128445991, guid: aef407a10ff2f2645b744bb36555ccc5, type: 3}
   bulletTransform: {fileID: 198855686221876484}
 --- !u!1 &6268016586274227121
 GameObject:
