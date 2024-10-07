@@ -1793,6 +1793,7 @@ MonoBehaviour:
   rightShooting: {fileID: 959325563974451539}
   rightgun: {fileID: 1301822745}
   leftGun: {fileID: 1923033803}
+  timeToReload: 2
 --- !u!1001 &767603844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4864,7 +4865,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d907e93e9047b8843805cc50b6a06231, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -6146,7 +6147,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d537b68104bcb064fb737ff5f031a59c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

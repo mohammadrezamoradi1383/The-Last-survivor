@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
   [SerializeField] private Animator rightShooting;
   [SerializeField] private Gun rightgun;
   [SerializeField] private Gun leftGun;
+  [SerializeField] private float timeToReload;
   private bool reload = false;
 
   private void Update()
@@ -31,7 +32,16 @@ public class Player : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.R))
     {
       reload = true;
-      StartCoroutine(Reloading());
+      rightShooting.SetBool("Reload", true);
+      Invoke(nameof(ReloadRightGun), timeToReload);
+     
+    }
+
+    if (Input.GetKeyDown(KeyCode.E))
+    {
+      reload = true;
+      leftShooting.SetBool("Reload", true);
+      Invoke(nameof(ReloadingLeftGun), timeToReload);
     }
   }
 
@@ -40,15 +50,18 @@ public class Player : MonoBehaviour
       yield return new WaitForSeconds(0.2f);
       animator.SetBool("Shooting", false);
   }
+  
 
-  IEnumerator Reloading()
+  private void ReloadingLeftGun()
   {
-     rightShooting.SetBool("Reload", true);
-      yield return new WaitForSeconds(2f);
+     leftShooting.SetBool("Reload", false);
+     reload = false;
+  }
+
+  private void ReloadRightGun()
+  {
     rightShooting.SetBool("Reload", false);
-     leftShooting.SetBool("Reload", true);
-     yield return new WaitForSeconds(2f);
-    leftShooting.SetBool("Reload", false);
     reload = false;
   }
+    
 }
