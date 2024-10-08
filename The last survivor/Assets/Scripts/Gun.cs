@@ -14,6 +14,5 @@ public class Gun : MonoBehaviour
     {
     Instantiate(particle, bulletTransform);
     Instantiate(bullet, bulletTransform.position, bulletTransform.rotation);
-    
   }
 }
