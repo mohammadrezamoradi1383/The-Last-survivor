@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
   
   [SerializeField] private int bulletCountR=6;
   [SerializeField] private int magazineCountR=30;
+
+  [SerializeField] private int health;
   private bool reload = false;
 
   private void Update()
@@ -45,8 +47,6 @@ public class Player : MonoBehaviour
       reload = true;
       rightShooting.SetBool("Reload", true);
       Invoke(nameof(ReloadRightGun), timeToReload);
-      // magazineCountR -= bulletCountR;
-      // playerInfo.ShowRightMagazine(bulletCountR , magazineCountR);
       var value = 6;
       if(magazineCountR<value) value = magazineCountR;
        magazineCountR -= value;
@@ -59,8 +59,6 @@ public class Player : MonoBehaviour
       reload = true;
       leftShooting.SetBool("Reload", true);
       Invoke(nameof(ReloadingLeftGun), timeToReload);
-      // magazineCountL -= bulletCountL;
-      // playerInfo.ShowLeftMagazine(bulletCountL , magazineCountL);
       var value = 6;
       if (magazineCountL < value) value = magazineCountL;
       magazineCountL -= value;
@@ -89,5 +87,10 @@ public class Player : MonoBehaviour
     reload = false;
     
   }
-    
+
+  public void gettingHurt()
+  {
+    health--;
+    playerInfo.ShowHealth(health);
+  }
 }
