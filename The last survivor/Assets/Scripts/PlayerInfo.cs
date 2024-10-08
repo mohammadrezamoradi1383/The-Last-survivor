@@ -9,7 +9,7 @@ public class PlayerInfo : MonoBehaviour
 {
    [SerializeField] TextMeshProUGUI leftGunMagazine;
    [SerializeField] TextMeshProUGUI rightGunMagazine;
-   [SerializeField] Slider healthSlider;
+   
 
    private void Start()
    {
@@ -28,6 +28,6 @@ public class PlayerInfo : MonoBehaviour
 
    public void ShowHealth(int playerHealth)
    {
-      healthSlider.value = playerHealth;
+     
    }
 }

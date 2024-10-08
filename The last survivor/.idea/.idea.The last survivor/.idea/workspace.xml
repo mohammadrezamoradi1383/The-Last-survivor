@@ -6,8 +6,108 @@
   <component name="ChangeListManager">
     <list default="true" id="084de722-bfbd-4231-9e22-bb816742cfab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Prefab/ZombieCartoon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Prefab/ZombieCartoon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/Materials/bkg_normal.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/Materials/bkg_normal.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/bkg_keys.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/bkg_keys.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/bkg_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/Source/UI/bkg_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/ZombieScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Scene/ZombieScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/Materials/ZombieToon_Color.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/Materials/ZombieToon_Color.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/Materials/ZombieToon_Mask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/Materials/ZombieToon_Mask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieCartoon_HgtOccTrns.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieCartoon_HgtOccTrns.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Color2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Color2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Mask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Character Zombie/ZombieToon_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_COL.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_COL.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_DISP.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_DISP.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_NRM.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/Materials/weapon_NRM.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_COL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_COL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_DISP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_DISP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_NRM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Maps/Weapon/weapon_NRM.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/MAT_ZombieCartoon.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/MAT_ZombieCartoon.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/Weapon.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Materials/Weapon.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Mesh/ZombieCartoon.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Mesh/ZombieCartoon.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@attack01.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@attack01.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@attack02.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@attack02.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@die01.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@die01.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@die02.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@die02.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@gethit01.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@gethit01.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@gethit02.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@gethit02.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@idle00.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@idle00.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@riseup.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@riseup.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@runzombie.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@runzombie.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@trotzombie.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@trotzombie.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@walknormal.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@walknormal.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@walkzombie.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Motion/ZombieCartoon@walkzombie.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/BumpedOutline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/BumpedOutline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/CharacterMobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/CharacterMobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/CharacterMobileOutline.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/Zombie Cartoon/Source/Shaders/Mobile/CharacterMobileOutline.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/Animations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/Animations.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/MorphUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/MorphUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/UI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DLNK/_DLNK Source/Source Demos/UI.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
