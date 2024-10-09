@@ -6,33 +6,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-  [SerializeField] private Animator leftShooting;
   [SerializeField] private Animator rightShooting;
   [SerializeField] private Gun rightgun;
-  [SerializeField] private Gun leftGun;
   [SerializeField] private float timeToReload;
   [SerializeField] private PlayerInfo playerInfo;
-  
-  [SerializeField] private int bulletCountL=6;
-  [SerializeField] private int magazineCountL=30;
-  
   [SerializeField] private int bulletCountR=6;
   [SerializeField] private int magazineCountR=30;
-
   [SerializeField] private int health;
+  [SerializeField] private Transform moshMoshi;
   private bool reload = false;
 
   private void Update()
   {
-    if (Input.GetMouseButtonDown(0) && reload==false&& bulletCountL>0)
-    {
-     leftShooting.SetBool("Shooting", true);
-     StartCoroutine(FixAnimation(leftShooting));
-     leftGun.ShootBullet();
-     bulletCountL--;
-     playerInfo.ShowLeftMagazine(bulletCountL , magazineCountL);
-    }
-
+    transform.LookAt(moshMoshi);
     if (Input.GetMouseButtonDown(1)&& reload==false&& bulletCountR>0)
     {
       rightShooting.SetBool("Shooting", true);
@@ -53,18 +39,7 @@ public class Player : MonoBehaviour
        bulletCountR = value;
       playerInfo.ShowRightMagazine(bulletCountR, magazineCountR);
     }
-
-    if (Input.GetKeyDown(KeyCode.E)&& magazineCountL>0&& bulletCountL!=6)
-    {
-      reload = true;
-      leftShooting.SetBool("Reload", true);
-      Invoke(nameof(ReloadingLeftGun), timeToReload);
-      var value = 6;
-      if (magazineCountL < value) value = magazineCountL;
-      magazineCountL -= value;
-      bulletCountL = value;
-      playerInfo.ShowLeftMagazine(bulletCountL , magazineCountL);
-    }
+    
   }
 
   IEnumerator FixAnimation(Animator animator)
@@ -73,13 +48,7 @@ public class Player : MonoBehaviour
       animator.SetBool("Shooting", false);
   }
   
-
-  private void ReloadingLeftGun()
-  {
-     leftShooting.SetBool("Reload", false);
-     reload = false;
-     
-  }
+  
 
   private void ReloadRightGun()
   {
