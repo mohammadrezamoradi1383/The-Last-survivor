@@ -435,6 +435,7 @@ MonoBehaviour:
   ZombieTransform: {fileID: 0}
   timeToRotate: 20
   health: 3
+  zombieBlood: {fileID: 2615577891828300179, guid: a2b2c50d3ba03164e9fdf8448db024f5, type: 3}
 --- !u!65 &4819822792737929198
 BoxCollider:
   m_ObjectHideFlags: 0

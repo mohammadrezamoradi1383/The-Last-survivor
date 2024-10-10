@@ -13,6 +13,7 @@ public class Zombie : MonoBehaviour
     [SerializeField] private RandomTransform ZombieTransform;
     [SerializeField] private float timeToRotate;
     [SerializeField] private int health;
+    [SerializeField] private ParticleSystem zombieBlood;
     private float elapsedTime;
     private bool waiting;
 
@@ -112,6 +113,9 @@ public class Zombie : MonoBehaviour
     {
         if (other.gameObject.tag == "bullet")
         {
+            ParticleSystem bloodInstance = Instantiate(zombieBlood, other.transform.position, other.transform.rotation);
+            bloodInstance.Play();
+            Destroy(bloodInstance.gameObject, bloodInstance.main.duration + bloodInstance.main.startLifetime.constantMax);
             StartCoroutine(waitZombie());
         }
     }
