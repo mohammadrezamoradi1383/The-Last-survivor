@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoshLoshi : MonoBehaviour
+public class hurtByZombie : MonoBehaviour
 {
+    private int health=3;
+    [SerializeField] private PlayerInfo playerInfo;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag=="slap")
         {
-            Debug.Log("Ahhhhhhhhhhhhhh");
+            health--;
+            playerInfo.BloodSplashHandler(health);
         }
     }
 }

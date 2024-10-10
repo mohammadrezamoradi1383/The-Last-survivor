@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
   [SerializeField] private Gun rightgun;
   [SerializeField] private float timeToReload;
   [SerializeField] private PlayerInfo playerInfo;
-  [SerializeField] private int bulletCountR=6;
+  [SerializeField] private int bulletCountR = 6;
   [SerializeField] private int health;
   [SerializeField] private Transform moshMoshi;
   private bool reload = false;
@@ -22,32 +22,31 @@ public class Player : MonoBehaviour
 
   IEnumerator FixAnimation(Animator animator)
   {
-      yield return new WaitForSeconds(0.2f);
-      animator.SetBool("Shooting", false);
+    yield return new WaitForSeconds(0.2f);
+    animator.SetBool("Shooting", false);
   }
-  
+
   private void ReloadRightGun()
   {
     rightShooting.SetBool("Reload", false);
     reload = false;
-    
   }
+
   public void ShootBullet()
   {
-    if (reload==false && bulletCountR>0)
+    if (reload == false && bulletCountR > 0)
     {
       rightShooting.SetBool("Shooting", true);
       StartCoroutine(FixAnimation(rightShooting));
       rightgun.ShootBullet();
       bulletCountR--;
       playerInfo.ShowRightMagazine(bulletCountR);
-      
     }
   }
 
   public void Reloading()
   {
-    if (bulletCountR!=6)
+    if (bulletCountR != 6)
     {
       reload = true;
       rightShooting.SetBool("Reload", true);
@@ -56,9 +55,7 @@ public class Player : MonoBehaviour
       bulletCountR = value;
       playerInfo.ShowRightMagazine(bulletCountR);
     }
-    
   }
-  
 }
 
 

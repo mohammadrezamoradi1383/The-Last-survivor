@@ -11,6 +11,7 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] TextMeshProUGUI rightGunMagazine;
    [SerializeField] private Button reloadingButton;
    [SerializeField] private Button shootingButton;
+   [SerializeField] private Image BloodSplash;
 
    private void OnEnable()
    {
@@ -32,6 +33,27 @@ public class PlayerInfo : MonoBehaviour
    public void ShowRightMagazine(int bullet )
    {
       rightGunMagazine.text = $"{bullet}";
+   }
+
+   public void BloodSplashHandler(int health)
+   {
+
+      Color color = BloodSplash.color;
+      switch (health)
+      {
+         case 2:
+            color.a = 0.4f;
+            BloodSplash.color = color;
+            return;
+         case 1:
+            color.a = 0.6f;
+            BloodSplash.color = color;     
+            return;
+         case 0:
+            color.a = 1;
+            BloodSplash.color = color; 
+            return;
+      }
    }
    
 }
