@@ -12,7 +12,9 @@ public class Zombie : MonoBehaviour
     [SerializeField] private Animator zombieAnimator;
     [SerializeField] private RandomTransform ZombieTransform;
     [SerializeField] private float timeToRotate;
+    [SerializeField] private int health;
     private float elapsedTime;
+    private bool waiting;
 
     private enum State
     {
@@ -32,60 +34,71 @@ public class Zombie : MonoBehaviour
 
     private void Update()
     {
-        elapsedTime += Time.deltaTime;
-
-        switch (currentState)
+        if (health != 0)
         {
-            case State.MovingToStart:
-                if (transform.position.z > 0)
+            if (waiting == false)
+            {
+                elapsedTime += Time.deltaTime;
+
+                switch (currentState)
                 {
-                    float currentYRotation = transform.rotation.eulerAngles.y;
-
-
-                    if (currentYRotation > 220f || currentYRotation < -90f)
-                    {
-                        if (currentYRotation > -140f || currentYRotation < 220f)
+                    case State.MovingToStart:
+                        if (transform.position.z > 0)
                         {
-                            timeToRotate = 10;
-                            transform.Rotate(Vector3.down * timeToRotate * Time.deltaTime);
+                            float currentYRotation = transform.rotation.eulerAngles.y;
+
+
+                            if (currentYRotation > 220f || currentYRotation < -90f)
+                            {
+                                if (currentYRotation > -140f || currentYRotation < 220f)
+                                {
+                                    timeToRotate = 10;
+                                    transform.Rotate(Vector3.down * timeToRotate * Time.deltaTime);
+                                }
+                            }
                         }
-                    }
+
+                        if (transform.position.z < 0)
+                        {
+                            if (transform.rotation.y >= -30f)
+                            {
+                                transform.Rotate(Vector3.up * timeToRotate * Time.deltaTime);
+                            }
+                        }
+
+                        MoveTowards(StartMoving.position);
+                        if (Vector3.Distance(transform.position, StartMoving.position) < 0.1f)
+                        {
+                            currentState = State.MovingToPlayer;
+                            elapsedTime = 0f;
+                            if (transform.position.z < 0)
+                            {
+                                transform.eulerAngles = new Vector3(transform.rotation.x, -90, transform.rotation.z);
+                            }
+
+                            if (transform.position.z > 0)
+                            {
+                                transform.eulerAngles = new Vector3(transform.rotation.x, -90, transform.rotation.z);
+                            }
+                        }
+
+                        break;
+
+                    case State.MovingToPlayer:
+                        MoveTowards(playerTransform.position);
+                        if (Vector3.Distance(transform.position, playerTransform.position) < 0.1f)
+                        {
+                            zombieAnimator.SetBool("Attack", true);
+                        }
+
+                        break;
                 }
-
-                if (transform.position.z < 0)
-                {
-                    if (transform.rotation.y >= -30f)
-                    {
-                        transform.Rotate(Vector3.up * timeToRotate * Time.deltaTime);
-                    }
-                }
-
-                MoveTowards(StartMoving.position);
-                if (Vector3.Distance(transform.position, StartMoving.position) < 0.1f)
-                {
-                    currentState = State.MovingToPlayer;
-                    elapsedTime = 0f;
-                    if (transform.position.z < 0)
-                    {
-                        transform.eulerAngles = new Vector3(transform.rotation.x, -90, transform.rotation.z);
-                    }
-
-                    if (transform.position.z > 0)
-                    {
-                        transform.eulerAngles = new Vector3(transform.rotation.x, -90, transform.rotation.z);
-                    }
-                }
-
-                break;
-
-            case State.MovingToPlayer:
-                MoveTowards(playerTransform.position);
-                if (Vector3.Distance(transform.position, playerTransform.position) < 0.1f)
-                {
-                    zombieAnimator.SetBool("Attack", true);
-                }
-
-                break;
+            }
+        }
+        else
+        {
+            zombieAnimator.SetBool("Death", true);
+            Destroy(gameObject, 2f);
         }
     }
 
@@ -93,5 +106,23 @@ public class Zombie : MonoBehaviour
     {
         float time = elapsedTime / duration;
         transform.position = Vector3.Lerp(transform.position, targetPosition, time * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            StartCoroutine(waitZombie());
+        }
+    }
+
+    IEnumerator waitZombie()
+    {
+        waiting = true;
+        zombieAnimator.SetBool("Damage", true);
+        health--;
+        yield return new WaitForSeconds(0.4f);
+        zombieAnimator.SetBool("Damage", false);
+        waiting = false;
     }
 }

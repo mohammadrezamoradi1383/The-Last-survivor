@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 2488703794141408389}
   m_Layer: 0
   m_Name: B-shoulder.R
-  m_TagString: Untagged
+  m_TagString: slap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,6 +369,8 @@ GameObject:
   - component: {fileID: 3524158265829606100}
   - component: {fileID: 3837382674964116849}
   - component: {fileID: 6555404051545657769}
+  - component: {fileID: 4819822792737929198}
+  - component: {fileID: 1526531136734756971}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -432,6 +434,55 @@ MonoBehaviour:
   zombieAnimator: {fileID: 3837382674964116849}
   ZombieTransform: {fileID: 0}
   timeToRotate: 20
+  health: 3
+--- !u!65 &4819822792737929198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693277013750343990}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51657945, y: 1.9808273, z: 0.3665389}
+  m_Center: {x: 0.0176993, y: 0.9465172, z: 0.003969762}
+--- !u!54 &1526531136734756971
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693277013750343990}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2138675650858494511
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,9 +683,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3576644157350000755}
+  - component: {fileID: 6848189010247151602}
   m_Layer: 0
   m_Name: B-upper_arm.L
-  m_TagString: Untagged
+  m_TagString: slap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,6 +707,27 @@ Transform:
   - {fileID: 3142174167837248225}
   m_Father: {fileID: 3642287043601079261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6848189010247151602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051771879078132850}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7550046, y: 0.1315406, z: 0.20728056}
+  m_Center: {x: -0.44992515, y: 0.014614744, z: 0.027174888}
 --- !u!1 &3079026722069902064
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +1024,7 @@ GameObject:
   - component: {fileID: 3642287043601079261}
   m_Layer: 0
   m_Name: B-shoulder.L
-  m_TagString: Untagged
+  m_TagString: slap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1080,9 +1153,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8609411575286095704}
+  - component: {fileID: 2884377348399443806}
   m_Layer: 0
   m_Name: B-upper_arm.R
-  m_TagString: Untagged
+  m_TagString: slap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,6 +1177,27 @@ Transform:
   - {fileID: 6161254417961534280}
   m_Father: {fileID: 2488703794141408389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2884377348399443806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4926730855074467135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7380753, y: 0.10140578, z: 0.2721253}
+  m_Center: {x: -0.40911183, y: -0.013136238, z: 0.023438508}
 --- !u!1 &4986662866262257379
 GameObject:
   m_ObjectHideFlags: 0
