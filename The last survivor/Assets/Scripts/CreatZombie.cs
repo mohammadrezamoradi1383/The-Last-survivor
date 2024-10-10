@@ -24,4 +24,14 @@ public class CreatZombie : MonoBehaviour
             yield return new WaitForSeconds(timeToCreat);
         }
     }
+    public void StopCoroutine()
+    {
+        StopAllCoroutines();
+        Invoke(nameof(StopTheGame), 5f);
+    }
+
+    public void StopTheGame()
+    {
+        Time.timeScale = 0;
+    }
 }

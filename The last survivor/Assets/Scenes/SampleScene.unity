@@ -1304,6 +1304,7 @@ MonoBehaviour:
   shootingButton: {fileID: 1150745489}
   BloodSplash: {fileID: 231681771}
   blackImage: {fileID: 1932730383}
+  CreatZombie: {fileID: 100175440}
 --- !u!114 &490181723
 MonoBehaviour:
   m_ObjectHideFlags: 0

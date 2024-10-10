@@ -13,6 +13,7 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private Button shootingButton;
    [SerializeField] private Image BloodSplash;
    [SerializeField] private GameObject blackImage;
+   [SerializeField] private CreatZombie CreatZombie;
 
    private void OnEnable()
    {
@@ -54,6 +55,7 @@ public class PlayerInfo : MonoBehaviour
             color.a = 1;
             BloodSplash.color = color; 
             blackImage.SetActive(true);
+            CreatZombie.StopCoroutine();
             player.GameOver();
             return;
       }

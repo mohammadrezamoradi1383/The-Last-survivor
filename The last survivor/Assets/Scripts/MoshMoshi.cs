@@ -14,18 +14,10 @@ public class MoshMoshi : MonoBehaviour
 
     private void Update()
     {
-        // محاسبه حرکت بر اساس ورودی جوی‌استیک
         Vector3 movement = Vector3.up * variableJoystick.Vertical + Vector3.back * variableJoystick.Horizontal;
-
-        // محاسبه موقعیت جدید
         Vector3 newPosition = transform.position + movement * (speed * Time.deltaTime);
-
-        // محدود کردن محور Y
         newPosition.y = Mathf.Clamp(newPosition.y, minY, maxY);
-        // محدود کردن محور Z
         newPosition.z = Mathf.Clamp(newPosition.z, minZ, maxZ);
-
-        // اعمال موقعیت محدود شده به آبجکت
         transform.position = newPosition;
     }
 }
