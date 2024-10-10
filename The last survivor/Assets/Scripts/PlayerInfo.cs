@@ -12,6 +12,7 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private Button reloadingButton;
    [SerializeField] private Button shootingButton;
    [SerializeField] private Image BloodSplash;
+   [SerializeField] private GameObject blackImage;
 
    private void OnEnable()
    {
@@ -52,6 +53,8 @@ public class PlayerInfo : MonoBehaviour
          case 0:
             color.a = 1;
             BloodSplash.color = color; 
+            blackImage.SetActive(true);
+            player.GameOver();
             return;
       }
    }
