@@ -15,7 +15,16 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform moshMoshi;
     [SerializeField] private GameObject handPlayer;
     [SerializeField] private Death death;
+    [SerializeField] private AudioSource playeraAudioSource;
+    [SerializeField] private AudioClip shootingAudioClip;
+    [SerializeField] private AudioClip reloadingAudioClip;
+    [SerializeField] private float playReloading;
     private bool reload = false;
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
 
     private void Update()
     {
@@ -38,6 +47,8 @@ public class Player : MonoBehaviour
     {
         if (reload == false && bulletCountR > 0)
         {
+            playeraAudioSource.clip = shootingAudioClip;
+            playeraAudioSource.Play();
             rightShooting.SetBool("Shooting", true);
             StartCoroutine(FixAnimation(rightShooting));
             rightgun.ShootBullet();
@@ -55,8 +66,16 @@ public class Player : MonoBehaviour
             Invoke(nameof(ReloadRightGun), timeToReload);
             var value = 6;
             bulletCountR = value;
-            playerInfo.ShowRightMagazine(bulletCountR);
+            playeraAudioSource.clip = reloadingAudioClip;
+            Invoke(nameof(PlayReloading), playReloading);
         }
+    }
+
+    private void PlayReloading()
+    {
+            playeraAudioSource.Play();
+            playerInfo.ShowRightMagazine(bulletCountR);
+        
     }
 
     public void GameOver()

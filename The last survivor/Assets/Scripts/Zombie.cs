@@ -11,9 +11,15 @@ public class Zombie : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private Animator zombieAnimator;
     [SerializeField] private RandomTransform ZombieTransform;
+    [SerializeField] private PlayerInfo playerScore;
     [SerializeField] private float timeToRotate;
     [SerializeField] private int health;
     [SerializeField] private ParticleSystem zombieBlood;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip deadSfx;
+    [SerializeField] private AudioClip damageSfx;
+    
+    
     private float elapsedTime;
     private bool waiting;
 
@@ -27,15 +33,17 @@ public class Zombie : MonoBehaviour
 
     private void Start()
     {
+        playerScore = FindObjectOfType<PlayerInfo>();
         zombieAnimator.SetBool("Walk", true);
         ZombieTransform = FindObjectOfType<RandomTransform>();
         StartMoving = ZombieTransform.ZombieTransformForMoving(transform);
         playerTransform = ZombieTransform.PlayerTransformForAttack();
+        audioSource.clip = damageSfx;
     }
 
     private void Update()
     {
-        if (health != 0)
+        if (health > 0)
         {
             if (waiting == false)
             {
@@ -102,7 +110,7 @@ public class Zombie : MonoBehaviour
             Destroy(gameObject, 2f);
         }
     }
-
+    
     private void MoveTowards(Vector3 targetPosition)
     {
         float time = elapsedTime / duration;
@@ -124,7 +132,14 @@ public class Zombie : MonoBehaviour
     {
         waiting = true;
         zombieAnimator.SetBool("Damage", true);
+        audioSource.Play();
         health--;
+        if (health==0)
+        {
+            audioSource.clip = deadSfx;
+            audioSource.Play();
+            playerScore.ZombieKilled();
+        }
         yield return new WaitForSeconds(0.4f);
         zombieAnimator.SetBool("Damage", false);
         waiting = false;
