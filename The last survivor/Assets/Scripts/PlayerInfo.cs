@@ -21,10 +21,12 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private int killedCount;
    [SerializeField] int bestScore;
    [SerializeField] private TextMeshProUGUI bestScoreText;
+   [SerializeField] private TextMeshProUGUI yourScoreText;
 
    
    private void Update()
    {
+      yourScoreText.text = $"YourScore {killedCount.ToString()}";
       if (PlayerPrefs.HasKey("BestScore"))
       {
          if (killedCount>PlayerPrefs.GetInt("BestScore"))
