@@ -1506,7 +1506,7 @@ MonoBehaviour:
   LoadTheGame: {fileID: 1932730387}
   playerInfoAudioSource: {fileID: 490181727}
   damage1: {fileID: 8300000, guid: 5d58f7dc5d48b9742b1524c384b841b3, type: 3}
-  damage2: {fileID: 8300000, guid: 24e0d8862d268624fbe92f6d1a477118, type: 3}
+  damage2: {fileID: 8300000, guid: 6ae12e227f5721b44a1b4fcc7de0c70a, type: 3}
   killedCount: 0
   bestScore: 0
   bestScoreText: {fileID: 518236157}

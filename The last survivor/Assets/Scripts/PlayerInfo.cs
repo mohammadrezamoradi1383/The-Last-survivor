@@ -55,6 +55,7 @@ public class PlayerInfo : MonoBehaviour
 
    private void Start()
    {
+      Application.targetFrameRate = 60;
       rightGunMagazine.text ="6";
       if (PlayerPrefs.HasKey("BestScore"))
       {

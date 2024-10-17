@@ -55,6 +55,10 @@ public class Player : MonoBehaviour
             bulletCountR--;
             playerInfo.ShowRightMagazine(bulletCountR);
         }
+        else
+        {
+            Reloading();
+        }
     }
 
     public void Reloading()
