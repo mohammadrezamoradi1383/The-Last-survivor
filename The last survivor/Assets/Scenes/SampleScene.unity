@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableJoystick: {fileID: 785934684}
-  speed: 8
+  speed: 5
   minZ: 0
   maxZ: 10
   maxY: 2

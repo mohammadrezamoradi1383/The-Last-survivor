@@ -144,4 +144,9 @@ public class Zombie : MonoBehaviour
         zombieAnimator.SetBool("Damage", false);
         waiting = false;
     }
+
+    public void HeadShot()
+    {
+        health -= 3;
+    }
 }
