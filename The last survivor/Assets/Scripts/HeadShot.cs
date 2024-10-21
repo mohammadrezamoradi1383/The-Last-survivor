@@ -14,6 +14,11 @@ public class HeadShot : MonoBehaviour
      AudioSource.clip = headShotSoundEffect;
  }
 
+ private void OnCollisionEnter(Collision other)
+ {
+     throw new NotImplementedException();
+ }
+
  private void OnTriggerEnter(Collider other)
  {
   if (other.gameObject.tag=="bullet")

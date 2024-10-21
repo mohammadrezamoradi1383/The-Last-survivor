@@ -148,5 +148,6 @@ public class Zombie : MonoBehaviour
     public void HeadShot()
     {
         health -= 3;
+        playerScore.ZombieKilled();
     }
 }

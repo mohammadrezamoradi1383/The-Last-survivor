@@ -76,6 +76,7 @@ public class PlayerInfo : MonoBehaviour
    {
       killedCount++;
    }
+   
    public void BloodSplashHandler(int health)
    {
 

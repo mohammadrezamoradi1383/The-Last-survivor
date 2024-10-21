@@ -290,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 982084347435265974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.171, z: 0}
+  m_LocalPosition: {x: 0, y: 1.93, z: 0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -315,8 +315,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47262022, y: 0.3453759, z: 0.34594247}
-  m_Center: {x: -0.001875311, y: -0.32731223, z: 0.017736759}
+  m_Size: {x: 0.46318984, y: 0.5189733, z: 0.58851427}
+  m_Center: {x: 0.0028399006, y: -0.2405136, z: 0.015274761}
 --- !u!114 &4196915573763702844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,8 +627,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.51657945, y: 1.6174328, z: 0.3665389}
-  m_Center: {x: 0.0176993, y: 0.76482, z: 0.003969762}
+  m_Size: {x: 0.51657945, y: 1.4490933, z: 0.64544624}
+  m_Center: {x: 0.017699301, y: 0.68065023, z: 0.20680082}
 --- !u!54 &1526531136734756971
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693277013750343990}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -650,12 +650,12 @@ Rigidbody:
     serializedVersion: 2
     m_Bits: 0
   m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitTensor: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &5036942182163039762
 AudioSource:
   m_ObjectHideFlags: 0
