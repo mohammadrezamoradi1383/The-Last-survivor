@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip shootingAudioClip;
     [SerializeField] private AudioClip reloadingAudioClip;
     [SerializeField] private float playReloading;
+    [SerializeField] private AudioClip reloadAudioClip;
     private bool reload = false;
 
     private void Awake()
@@ -57,7 +58,9 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Reloading();
+            playerInfo.ShowReloadPanel(true);
+            playeraAudioSource.clip = reloadAudioClip;
+            playeraAudioSource.Play();
         }
     }
 
@@ -65,6 +68,7 @@ public class Player : MonoBehaviour
     {
         if (bulletCountR != 6)
         {
+            playerInfo.ShowReloadPanel(false);
             reload = true;
             rightShooting.SetBool("Reload", true);
             Invoke(nameof(ReloadRightGun), timeToReload);

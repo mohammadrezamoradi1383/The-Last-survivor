@@ -18,7 +18,9 @@ public class Zombie : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip deadSfx;
     [SerializeField] private AudioClip damageSfx;
-    
+
+    [SerializeField] private BoxCollider zombieBody;
+    [SerializeField] private BoxCollider headZombie;
     
     private float elapsedTime;
     private bool waiting;
@@ -107,6 +109,8 @@ public class Zombie : MonoBehaviour
         else
         {
             zombieAnimator.SetBool("Death", true);
+            headZombie.enabled = false;
+            zombieBody.enabled = false;
             Destroy(gameObject, 2f);
         }
     }

@@ -608,6 +608,8 @@ MonoBehaviour:
   audioSource: {fileID: 5036942182163039762}
   deadSfx: {fileID: 8300000, guid: 18d1b32a96b72c84e81131321cf884d3, type: 3}
   damageSfx: {fileID: 8300000, guid: 29ae6697d9f82f84fb8191f995007ce7, type: 3}
+  zombieBody: {fileID: 4819822792737929198}
+  headZombie: {fileID: 692727077378882336}
 --- !u!65 &4819822792737929198
 BoxCollider:
   m_ObjectHideFlags: 0

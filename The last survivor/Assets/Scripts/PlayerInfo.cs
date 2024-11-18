@@ -22,8 +22,7 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] int bestScore;
    [SerializeField] private TextMeshProUGUI bestScoreText;
    [SerializeField] private TextMeshProUGUI yourScoreText;
-
-   
+   [SerializeField] private GameObject reloadPanel;
    private void Update()
    {
       yourScoreText.text = $"YourScore {killedCount.ToString()}";
@@ -76,7 +75,11 @@ public class PlayerInfo : MonoBehaviour
    {
       killedCount++;
    }
-   
+
+   public void ShowReloadPanel(bool value)
+   {
+      reloadPanel.SetActive(value);
+   }
    public void BloodSplashHandler(int health)
    {
 
