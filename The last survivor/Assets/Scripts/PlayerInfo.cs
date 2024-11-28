@@ -23,8 +23,22 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private TextMeshProUGUI bestScoreText;
    [SerializeField] private TextMeshProUGUI yourScoreText;
    [SerializeField] private GameObject reloadPanel;
+   [SerializeField] private int numberToShowLevelUp;
+   [SerializeField] private LevelUpDialog levelUpDialog;
+
+   private int _iconValue = 0;
    private void Update()
    {
+      if (killedCount>=numberToShowLevelUp)
+      {
+         levelUpDialog.ShowDialog(_iconValue);
+         if (numberToShowLevelUp<=50)
+         {
+            numberToShowLevelUp += 10;
+            _iconValue++;
+         }
+
+      }
       yourScoreText.text = $"YourScore {killedCount.ToString()}";
       if (PlayerPrefs.HasKey("BestScore"))
       {

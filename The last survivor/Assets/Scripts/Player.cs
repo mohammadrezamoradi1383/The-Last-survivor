@@ -58,9 +58,12 @@ public class Player : MonoBehaviour
         }
         else
         {
-            playerInfo.ShowReloadPanel(true);
-            playeraAudioSource.clip = reloadAudioClip;
-            playeraAudioSource.Play();
+            if (bulletCountR==0)
+            {
+                playerInfo.ShowReloadPanel(true);
+                playeraAudioSource.clip = reloadAudioClip;
+                playeraAudioSource.Play();
+            }
         }
     }
 
