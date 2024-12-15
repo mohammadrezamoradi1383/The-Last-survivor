@@ -2085,6 +2085,8 @@ MonoBehaviour:
   levelUpDialog: {fileID: 64495415}
   medalCount: {fileID: 918743702}
   medalValue: 0
+  bombPowerOps: {fileID: 602625831}
+  healthPowerOps: {fileID: 609807768}
 --- !u!114 &490181723
 MonoBehaviour:
   m_ObjectHideFlags: 0

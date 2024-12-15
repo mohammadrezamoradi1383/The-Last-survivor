@@ -28,6 +28,9 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private LevelUpDialog levelUpDialog;
    [SerializeField] private TextMeshProUGUI medalCount;
    [SerializeField] private int medalValue=0;
+   [SerializeField] private GameObject bombPowerOps;
+   [SerializeField] private GameObject healthPowerOps;
+   
    private int medalLevel=10;
    private int _iconValue = 0;
    private void Update()
@@ -130,9 +133,11 @@ public class PlayerInfo : MonoBehaviour
       }
    }
 
-   public void DontShowReload()
+   public void DontShowAnyThing()
    {
       reloadPanel.SetActive(false);
+      bombPowerOps.SetActive(false);
+      healthPowerOps.SetActive(false);
    }
 
    private void MedalController()
