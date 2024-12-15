@@ -13,6 +13,11 @@ public class LevelUpDialog : MonoBehaviour
        levelUpAnimator.SetBool("LevelUp", true);
        Invoke(nameof(HideDialog), 3f);
     }
+    
+    public void FinishAnimation()
+    {
+        levelUpAnimator.SetBool("finish", true);
+    }
     private void SetIcon(int value)
     {
         for (int i = 0; i < levelIcon.Count; i++)

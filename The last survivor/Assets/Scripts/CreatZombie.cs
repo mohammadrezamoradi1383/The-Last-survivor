@@ -10,6 +10,13 @@ public class CreatZombie : MonoBehaviour
     [SerializeField] private Transform[] zombiePosition;
     [SerializeField] private float timeToCreat;
 
+    public void ChangeTimeToCreatZombie()
+    {
+        if (timeToCreat>=2)
+        {
+            timeToCreat--;
+        }
+    }
     private void Start()
     {
         StartCoroutine(ZombieMaker());

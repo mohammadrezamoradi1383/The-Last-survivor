@@ -35,9 +35,13 @@ public class PlayerInfo : MonoBehaviour
          if (numberToShowLevelUp<=50)
          {
             numberToShowLevelUp += 10;
+            CreatZombie.ChangeTimeToCreatZombie();
             _iconValue++;
          }
-
+         else
+         {
+            levelUpDialog.FinishAnimation();
+         }
       }
       yourScoreText.text = $"YourScore {killedCount.ToString()}";
       if (PlayerPrefs.HasKey("BestScore"))
