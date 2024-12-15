@@ -13,18 +13,16 @@ public class Zombie : MonoBehaviour
     [SerializeField] private RandomTransform ZombieTransform;
     [SerializeField] private PlayerInfo playerScore;
     [SerializeField] private float timeToRotate;
-    [SerializeField] private int health;
     [SerializeField] private ParticleSystem zombieBlood;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip deadSfx;
     [SerializeField] private AudioClip damageSfx;
-
     [SerializeField] private BoxCollider zombieBody;
     [SerializeField] private BoxCollider headZombie;
-    
     private float elapsedTime;
     private bool waiting;
-
+    public int health;
+    public GameObject explodeParticleTransform;
     private enum State
     {
         MovingToStart,
@@ -154,4 +152,5 @@ public class Zombie : MonoBehaviour
         health -= 3;
         playerScore.ZombieKilled();
     }
+     
 }

@@ -15,6 +15,7 @@ public class PowerOps : MonoBehaviour
     [SerializeField] private PlayerInfo playerInfo;
     [SerializeField] private hurtByZombie playerHealth;
     [SerializeField] private Animator healthAnimator;
+    [SerializeField] private ParticleSystem explode;
     private void OnEnable()
     {
         button.onClick.AddListener(OnClickPowerOps);
@@ -30,7 +31,14 @@ public class PowerOps : MonoBehaviour
         switch (type)
         {
             case Model.Bomb:
-                //todo
+                var zombies = FindObjectsOfType<Zombie>();
+                foreach (var t in zombies)
+                {
+                    t.health = 0;
+                    ParticleSystem particleSystem = Instantiate(explode, t.explodeParticleTransform.transform.position, t.explodeParticleTransform.transform.rotation);
+                    particleSystem.Play();
+                    Destroy(particleSystem.gameObject, particleSystem.main.duration + particleSystem.main.startLifetime.constantMax);
+                }
                 break;
             case Model.Health:
                 playerHealth.Revive();

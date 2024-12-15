@@ -2941,6 +2941,7 @@ MonoBehaviour:
   playerInfo: {fileID: 490181722}
   playerHealth: {fileID: 483141987}
   healthAnimator: {fileID: 1704798763}
+  explode: {fileID: 2615577891828300179, guid: ca82b2d215494204bb8f85fdd24b32da, type: 3}
 --- !u!1 &606000543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,6 +3118,7 @@ MonoBehaviour:
   playerInfo: {fileID: 490181722}
   playerHealth: {fileID: 483141987}
   healthAnimator: {fileID: 1704798763}
+  explode: {fileID: 2615577891828300179, guid: ca82b2d215494204bb8f85fdd24b32da, type: 3}
 --- !u!114 &609807773
 MonoBehaviour:
   m_ObjectHideFlags: 0
