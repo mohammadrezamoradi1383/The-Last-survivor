@@ -26,12 +26,15 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private GameObject reloadPanel;
    [SerializeField] private int numberToShowLevelUp;
    [SerializeField] private LevelUpDialog levelUpDialog;
-
+   [SerializeField] private TextMeshProUGUI medalCount;
+   [SerializeField] private int medalValue=0;
+   private int medalLevel=10;
    private int _iconValue = 0;
    private void Update()
    {
       if (killedCount>=numberToShowLevelUp)
       {
+         MedalController();
          levelUpDialog.ShowDialog(_iconValue);
          if (numberToShowLevelUp<=50)
          {
@@ -44,6 +47,7 @@ public class PlayerInfo : MonoBehaviour
             levelUpDialog.FinishAnimation();
          }
       }
+      
       yourScoreText.text = $"YourScore {killedCount.ToString()}";
       if (PlayerPrefs.HasKey("BestScore"))
       {
@@ -75,14 +79,8 @@ public class PlayerInfo : MonoBehaviour
    {
       Application.targetFrameRate = 60;
       rightGunMagazine.text ="6";
-      if (PlayerPrefs.HasKey("BestScore"))
-      {
-         bestScoreText.text =$"bestScore {PlayerPrefs.GetInt("BestScore").ToString()}";
-      }
-      else
-      {
-         bestScoreText.text = "bestScore 0";
-      }
+      bestScoreText.text = PlayerPrefs.HasKey("BestScore") ? $"bestScore {PlayerPrefs.GetInt("BestScore").ToString()}" : "bestScore 0";
+      medalCount.text = PlayerPrefs.GetInt("Medal").ToString();
    }
    
    public void ShowRightMagazine(int bullet )
@@ -132,5 +130,21 @@ public class PlayerInfo : MonoBehaviour
    {
       reloadPanel.SetActive(false);
    }
-   
+
+   private void MedalController()
+   {
+      
+      if (killedCount >= medalLevel)
+      {
+         if (PlayerPrefs.HasKey("Medal"))
+         {
+            medalValue = PlayerPrefs.GetInt("Medal");
+         }
+         medalValue++;
+         PlayerPrefs.SetInt("Medal", medalValue); 
+         PlayerPrefs.Save(); 
+         medalCount.text = medalValue.ToString(); 
+         medalLevel += 10; 
+      }
+   }
 }

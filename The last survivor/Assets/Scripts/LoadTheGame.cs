@@ -39,7 +39,6 @@ public class LoadTheGame : MonoBehaviour
       }
       else
       {
-         
          PlayerPrefs.SetInt("BestScore", num);
          PlayerPrefs.Save();
       }
