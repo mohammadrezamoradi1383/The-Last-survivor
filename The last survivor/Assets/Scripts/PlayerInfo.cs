@@ -103,6 +103,10 @@ public class PlayerInfo : MonoBehaviour
       Color color = BloodSplash.color;
       switch (health)
       {
+         case 3:
+            color.a = 0f;
+            BloodSplash.color = color;
+            return;
          case 2:
             color.a = 0.4f;
             BloodSplash.color = color;

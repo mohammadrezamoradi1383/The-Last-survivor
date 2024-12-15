@@ -14,4 +14,10 @@ public class hurtByZombie : MonoBehaviour
             playerInfo.BloodSplashHandler(health);
         }
     }
+
+    public void Revive()
+    {
+        health = 3;
+        playerInfo.BloodSplashHandler(health);
+    }
 }
