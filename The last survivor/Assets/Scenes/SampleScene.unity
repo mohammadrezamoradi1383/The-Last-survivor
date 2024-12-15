@@ -616,7 +616,7 @@ MonoBehaviour:
   zombiePosition:
   - {fileID: 2039058076}
   - {fileID: 1021767811}
-  timeToCreat: 7
+  timeToCreat: 4.5
 --- !u!4 &142658673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4919135733088466, guid: e7400f9e927fd47a394fadd5d536fb00, type: 3}

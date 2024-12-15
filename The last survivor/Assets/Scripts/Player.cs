@@ -93,5 +93,6 @@ public class Player : MonoBehaviour
     {
         death.ShowDeathAnimation();
         handPlayer.SetActive(false);
+        playerInfo.DontShowReload();
     }
 }

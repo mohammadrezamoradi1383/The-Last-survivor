@@ -14,7 +14,7 @@ public class CreatZombie : MonoBehaviour
     {
         if (timeToCreat>=2)
         {
-            timeToCreat--;
+            timeToCreat -= 0.5f;
         }
     }
     private void Start()

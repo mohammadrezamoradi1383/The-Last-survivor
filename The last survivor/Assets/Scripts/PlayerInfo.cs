@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -125,6 +126,11 @@ public class PlayerInfo : MonoBehaviour
             player.GameOver();
             return;
       }
+   }
+
+   public void DontShowReload()
+   {
+      reloadPanel.SetActive(false);
    }
    
 }
