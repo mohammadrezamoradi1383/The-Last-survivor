@@ -11,13 +11,80 @@ public class PowerOps : MonoBehaviour
     [SerializeField] private int count;
     [SerializeField] private Button button;
     [SerializeField] private GameObject disable;
+    [SerializeField] private GameObject indicator;
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private PlayerInfo playerInfo;
     [SerializeField] private hurtByZombie playerHealth;
     [SerializeField] private Animator healthAnimator;
     [SerializeField] private ParticleSystem explode;
+
+    private void Update()
+    {
+        switch (type)
+        {
+            case Model.Bomb:
+                var bombValue = PlayerPrefs.GetInt("Bomb");
+                if (bombValue==0)
+                {
+                    disable.SetActive(true);
+                    indicator.SetActive(false);
+                    button.interactable = false;
+
+                }
+                else
+                {
+                    disable.SetActive(false);
+                    indicator.SetActive(true);
+                    button.interactable = true;
+                }
+                break;
+            case Model.Health:
+                var healthValue = PlayerPrefs.GetInt("Health");
+                if (healthValue==0)
+                {
+                    disable.SetActive(true);
+                    indicator.SetActive(false);
+                    button.interactable = false;
+                }
+                else
+                {
+                    disable.SetActive(false);
+                    indicator.SetActive(true);
+                    button.interactable = true;
+                }
+                break;
+        }
+    }
+
+    public void IncreaseCount()
+    {
+        count++;
+        switch (type)
+        {
+            case Model.Bomb:
+            PlayerPrefs.SetInt("Bomb" , count); 
+            countText.text = PlayerPrefs.GetInt("Bomb").ToString();
+            PlayerPrefs.Save();
+            break;
+            case Model.Health:
+            PlayerPrefs.SetInt("Health", count);
+            countText.text = PlayerPrefs.GetInt("Health").ToString();
+            PlayerPrefs.Save();
+            break;
+        }
+
+    }
     private void OnEnable()
     {
+        switch (type)
+        {
+            case Model.Health:
+                countText.text = PlayerPrefs.GetInt("Health").ToString();
+                break;
+            case Model.Bomb:
+                countText.text = PlayerPrefs.GetInt("Bomb").ToString();
+                break;
+        }
         button.onClick.AddListener(OnClickPowerOps);
     }
 
@@ -31,6 +98,9 @@ public class PowerOps : MonoBehaviour
         switch (type)
         {
             case Model.Bomb:
+                var bombValue = PlayerPrefs.GetInt("Bomb");
+                bombValue--;
+                PlayerPrefs.SetInt("Bomb" , bombValue);
                 var zombies = FindObjectsOfType<Zombie>();
                 foreach (var t in zombies)
                 {
@@ -41,6 +111,9 @@ public class PowerOps : MonoBehaviour
                 }
                 break;
             case Model.Health:
+                var healthValue = PlayerPrefs.GetInt("Health");
+                healthValue--;
+                PlayerPrefs.SetInt("Health" , healthValue);
                 playerHealth.Revive();
                 healthAnimator.SetBool("ShowHealthSplash", true);
                 Invoke(nameof(HideHealthSplash), 3f);

@@ -33,6 +33,17 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private Button medalButton;
    [SerializeField] private GameObject shopDialogGameObject;
    
+
+   public int Medal()
+   {
+      return medalValue;
+   }
+
+   public void SetMedal(int value)
+   {
+      PlayerPrefs.SetInt("Medal", value);
+      medalCount.text = value.ToString();
+   }
    private int medalLevel=10;
    private int _iconValue = 0;
    private void Update()
@@ -94,6 +105,7 @@ public class PlayerInfo : MonoBehaviour
       rightGunMagazine.text ="6";
       bestScoreText.text = PlayerPrefs.HasKey("BestScore") ? $"bestScore {PlayerPrefs.GetInt("BestScore").ToString()}" : "bestScore 0";
       medalCount.text = PlayerPrefs.GetInt("Medal").ToString();
+      
    }
    
    public void ShowRightMagazine(int bullet )

@@ -982,7 +982,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 85206679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3667,6 +3667,7 @@ MonoBehaviour:
   count: 0
   button: {fileID: 602625835}
   disable: {fileID: 1077696149}
+  indicator: {fileID: 411230760}
   countText: {fileID: 1571693782}
   playerInfo: {fileID: 490181722}
   playerHealth: {fileID: 483141987}
@@ -3844,6 +3845,7 @@ MonoBehaviour:
   count: 0
   button: {fileID: 609807773}
   disable: {fileID: 300491244}
+  indicator: {fileID: 932076797}
   countText: {fileID: 106949127}
   playerInfo: {fileID: 490181722}
   playerHealth: {fileID: 483141987}
@@ -7715,9 +7717,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeButton: {fileID: 2147015922}
   healthBoxShopItem: {fileID: 85206680}
-  notEnoughMedalFoeBomb: {fileID: 533403860}
+  notEnoughMedalForBomb: {fileID: 533403860}
   bombBoxShopItem: {fileID: 589979140}
-  notEnoughMedalFoeHealth: {fileID: 166132528}
+  notEnoughMedalForHealth: {fileID: 166132528}
   healthPowerOps: {fileID: 602625836}
   bombPowerOps: {fileID: 609807772}
   playerInfo: {fileID: 490181722}

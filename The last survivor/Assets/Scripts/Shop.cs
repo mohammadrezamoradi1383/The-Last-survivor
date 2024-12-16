@@ -8,12 +8,22 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private Button closeButton;
     [SerializeField] private Button healthBoxShopItem;
-    [SerializeField] private GameObject notEnoughMedalFoeBomb;
+    [SerializeField] private GameObject notEnoughMedalForBomb;
     [SerializeField] private Button bombBoxShopItem;
-    [SerializeField] private GameObject notEnoughMedalFoeHealth;
+    [SerializeField] private GameObject notEnoughMedalForHealth;
     [SerializeField] private PowerOps healthPowerOps;
     [SerializeField] private PowerOps bombPowerOps;
     [SerializeField] private PlayerInfo playerInfo;
+
+    private int healthPrice = 5;
+    private int bombPrice = 6;
+
+    private void Update()
+    {
+        var playerMedals = PlayerPrefs.GetInt("Medal");
+        notEnoughMedalForHealth.SetActive(playerMedals < healthPrice);
+        notEnoughMedalForBomb.SetActive(playerMedals < bombPrice);
+    }
 
     private void OnEnable()
     {
@@ -37,20 +47,29 @@ public class Shop : MonoBehaviour
 
     private void HealthShopButton()
     {
-        
+        var playerMedals = PlayerPrefs.GetInt("Medal");
+        if (playerMedals>=healthPrice)
+        {
+            healthPowerOps.IncreaseCount();
+            playerMedals -= healthPrice;
+            playerInfo.SetMedal(playerMedals);
+        }
     }
 
     private void BombShopButton()
     {
-        
+        var playerMedals = PlayerPrefs.GetInt("Medal");
+        if (playerMedals>=bombPrice)
+        {
+            bombPowerOps.IncreaseCount();
+            playerMedals -= bombPrice;
+            playerInfo.SetMedal(playerMedals);
+        }
     }
 
     private void NewGun()
     {
-      //todo  
+        //todo  
     }
-    private void SetActiveShop()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }
