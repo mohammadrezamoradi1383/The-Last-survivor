@@ -30,6 +30,8 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private int medalValue=0;
    [SerializeField] private GameObject bombPowerOps;
    [SerializeField] private GameObject healthPowerOps;
+   [SerializeField] private Button medalButton;
+   [SerializeField] private GameObject shopDialogGameObject;
    
    private int medalLevel=10;
    private int _iconValue = 0;
@@ -70,14 +72,22 @@ public class PlayerInfo : MonoBehaviour
    {
       reloadingButton.onClick.AddListener(player.Reloading);
       shootingButton.onClick.AddListener(player.ShootBullet);
+      medalButton.onClick.AddListener(ShowShopDialog);
    }
 
    private void OnDisable()
    {
      reloadingButton.onClick.RemoveListener(player.Reloading);
      shootingButton.onClick.RemoveListener(player.ShootBullet);
+     medalButton.onClick.RemoveListener(ShowShopDialog);
    }
 
+   private void ShowShopDialog()
+   {
+      shopDialogGameObject.SetActive(true);
+      Time.timeScale = 0;
+   }
+   
    private void Start()
    {
       Application.targetFrameRate = 60;
