@@ -76,6 +76,8 @@ public class PlayerInfo : MonoBehaviour
       else
       {
          bestScoreText.text =$"bestScore {killedCount.ToString()}";
+         PlayerPrefs.SetInt("BestScore", killedCount);
+         PlayerPrefs.Save();
       }
    }
 
