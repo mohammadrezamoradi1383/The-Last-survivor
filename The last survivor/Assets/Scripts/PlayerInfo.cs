@@ -9,9 +9,7 @@ using UnityEngine.UI;
 public class PlayerInfo : MonoBehaviour
 {
    [SerializeField] private Player player;
-   [SerializeField] TextMeshProUGUI rightGunMagazine;
    [SerializeField] private Button reloadingButton;
-   [SerializeField] private Button shootingButton;
    [SerializeField] private Image BloodSplash;
    [SerializeField] private GameObject blackImage;
    [SerializeField] private CreatZombie CreatZombie;
@@ -23,7 +21,6 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] int bestScore;
    [SerializeField] private TextMeshProUGUI bestScoreText;
    [SerializeField] private TextMeshProUGUI yourScoreText;
-   [SerializeField] private GameObject reloadPanel;
    [SerializeField] private int numberToShowLevelUp;
    [SerializeField] private LevelUpDialog levelUpDialog;
    [SerializeField] private TextMeshProUGUI medalCount;
@@ -31,14 +28,12 @@ public class PlayerInfo : MonoBehaviour
    [SerializeField] private GameObject bombPowerOps;
    [SerializeField] private GameObject healthPowerOps;
    [SerializeField] private Button medalButton;
-   [SerializeField] private GameObject shopDialogGameObject;
-   
-
-   public int Medal()
-   {
-      return medalValue;
-   }
-
+   [SerializeField] private GameObject shopDialogGameObject; 
+   public Button shootingButton;
+   public GameObject reloadPanel;
+   public TextMeshProUGUI rightGunMagazine; 
+   public GameObject smgReloadButton;
+   public GameObject smgShootButton;
    public void SetMedal(int value)
    {
       PlayerPrefs.SetInt("Medal", value);
@@ -179,5 +174,7 @@ public class PlayerInfo : MonoBehaviour
          medalCount.text = medalValue.ToString(); 
          medalLevel += 10; 
       }
+      
    }
+   
 }
