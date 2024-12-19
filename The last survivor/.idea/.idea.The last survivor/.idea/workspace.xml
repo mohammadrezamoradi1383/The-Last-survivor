@@ -7,9 +7,7 @@
     <list default="true" id="084de722-bfbd-4231-9e22-bb816742cfab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The last survivor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoshMoshi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoshMoshi.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +121,7 @@
       <workItem from="1734510989711" duration="931000" />
       <workItem from="1734514207211" duration="4359000" />
       <workItem from="1734528272095" duration="1161000" />
-      <workItem from="1734589938517" duration="12919000" />
+      <workItem from="1734589938517" duration="14291000" />
     </task>
     <servers />
   </component>
