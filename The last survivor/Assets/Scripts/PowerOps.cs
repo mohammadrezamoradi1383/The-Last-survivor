@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PowerOps : MonoBehaviour
 {
     [SerializeField] private Model type;
-    [SerializeField] private int count;
+    //[SerializeField] private int count;
     [SerializeField] private Button button;
     [SerializeField] private GameObject disable;
     [SerializeField] private GameObject indicator;
@@ -36,6 +36,7 @@ public class PowerOps : MonoBehaviour
                     disable.SetActive(false);
                     indicator.SetActive(true);
                     button.interactable = true;
+                    countText.text = PlayerPrefs.GetInt("Bomb").ToString();
                 }
                 break;
             case Model.Health:
@@ -51,6 +52,7 @@ public class PowerOps : MonoBehaviour
                     disable.SetActive(false);
                     indicator.SetActive(true);
                     button.interactable = true;
+                    countText.text = PlayerPrefs.GetInt("Health").ToString();
                 }
                 break;
         }
@@ -58,16 +60,19 @@ public class PowerOps : MonoBehaviour
 
     public void IncreaseCount()
     {
-        count++;
         switch (type)
         {
             case Model.Bomb:
-            PlayerPrefs.SetInt("Bomb" , count); 
+            var bombCount = PlayerPrefs.GetInt("Bomb");
+            bombCount++;
+            PlayerPrefs.SetInt("Bomb" , bombCount); 
             countText.text = PlayerPrefs.GetInt("Bomb").ToString();
             PlayerPrefs.Save();
             break;
             case Model.Health:
-            PlayerPrefs.SetInt("Health", count);
+                var HealthCount = PlayerPrefs.GetInt("Health");
+                HealthCount++;
+            PlayerPrefs.SetInt("Health", HealthCount);
             countText.text = PlayerPrefs.GetInt("Health").ToString();
             PlayerPrefs.Save();
             break;
@@ -101,6 +106,7 @@ public class PowerOps : MonoBehaviour
                 var bombValue = PlayerPrefs.GetInt("Bomb");
                 bombValue--;
                 PlayerPrefs.SetInt("Bomb" , bombValue);
+                PlayerPrefs.Save();
                 var zombies = FindObjectsOfType<Zombie>();
                 foreach (var t in zombies)
                 {
@@ -114,6 +120,7 @@ public class PowerOps : MonoBehaviour
                 var healthValue = PlayerPrefs.GetInt("Health");
                 healthValue--;
                 PlayerPrefs.SetInt("Health" , healthValue);
+                PlayerPrefs.Save();
                 playerHealth.Revive();
                 healthAnimator.SetBool("ShowHealthSplash", true);
                 Invoke(nameof(HideHealthSplash), 3f);

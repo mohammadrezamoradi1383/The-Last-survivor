@@ -34,8 +34,8 @@ public class Shop : MonoBehaviour
     
     private int healthPrice = 5;
     private int bombPrice = 6;
-    private int gun2Price = 2;
-    private int gun3Price = 2;
+    private int gun2Price = 25;
+    private int gun3Price = 35;
 
     private void Start()
     {
